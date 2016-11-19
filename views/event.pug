@@ -1,0 +1,10 @@
+html
+    head
+        link(href="https://bootswatch.com/paper/bootstrap.min.css", rel="stylesheet" type="text/css")
+    body
+        div.container
+            div.text-right
+                strong= event.id
+            h1= event.summary
+            div= event.description
+            pre= JSON.stringify(event)

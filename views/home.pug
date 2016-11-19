@@ -1,0 +1,25 @@
+html
+    head
+        link(href="https://bootswatch.com/paper/bootstrap.min.css", rel="stylesheet" type="text/css")
+        style.
+            .form-control, input[type='submit'] {
+                margin-top: 1em;
+            }
+    body
+        div.container
+            h1 Ya iniciaste
+                form.form-inline(action="/logout" method="POST")
+                    input(type="submit" value="Cerrar Sesión" class="btn btn-danger")
+        div.container
+            form(action="/events" method="POST")
+                input(type="text" name="summary" placeholder="Resumen del evento" class="form-control")
+                textarea(name="description" placeholder="Detalles del evento..." class="form-control")
+                div
+                    label Inicio del evento
+                    input(type="datetime-local" class="form-control" name="start")
+                div
+                    label Fin del evento
+                    input(type="datetime-local" class="form-control" name="end")
+                div.text-center
+                    input(type="submit" class="btn btn-danger" value="Agregar evento")
+        
